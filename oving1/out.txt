@@ -1,0 +1,68 @@
+Script started on 2023-08-31 09:00:05+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="56" LINES="34"]
+~ $ mkdir DAT120 && cd !$
+bash: !: event not found
+~ $ ls
+out
+~ $ mkdir DAT120
+~ $ cd DAT120/
+~/DAT120 $ mkdir python
+~/DAT120 $ cd !$
+~/DAT120 $ cd python
+~/DAT120/python $ mkdir oving1
+~/DAT120/python $ cd oving1/
+~/.../python/oving1 $ python3 <<<"print(12*2+4*(11+6))"
+92
+~/.../python/oving1 $ python3
+Python 3.11.5 (main, Aug 30 2023, 00:13:08) [Clang 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0 on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = 12*2+4*(11+6)
+>>> a*3-25
+251
+>>> # d) programmet leser inn to tall, tolker de som flyttall, og regner ut produktet av 1/2 ganger massetallet ganger farttallet i andre. Dette er tilsyneladende utregningen for bevegelsesenergien.
+>>> def km_to_nm(f):
+...     return f / 1.852
+...
+>>> def tv_size(d):
+...     hyp = sqrt(16**2+9**2)
+...     l1 = 16/hyp * d
+...     l2 = 9/hyp * d
+...     return (l1,l2)
+...
+>>> import turtle
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'turtle'
+>>> exit()
+~/.../python/oving1 $ exit
+exit
+
+Script done on 2023-08-31 09:05:48+02:00 [COMMAND_EXIT_CODE="0"]
+
+Script started on 2023-08-31 09:07:33+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="56" LINES="34"]
+~ $ tree DAT120/
+DAT120/
+└── python
+    └── oving1
+
+3 directories, 0 files
+~ $ cd DAT120/python/oving1/
+~/.../python/oving1 $ python3
+Python 3.11.5 (main, Aug 30 2023, 00:13:08) [Clang 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0 on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> # pretend i have turtle installed
+>>> # from turtle import forward,left
+>>> def main():
+...     left(90)
+...     forward(100)
+...     left(-45)
+...     for i in range(4):
+...             forward(100)
+...             left(90)
+...     left(-135)
+...     forward(100)
+...
+>>> exit()
+~/.../python/oving1 $ exit
+exit
+
+Script done on 2023-08-31 09:09:32+02:00 [COMMAND_EXIT_CODE="0"]
