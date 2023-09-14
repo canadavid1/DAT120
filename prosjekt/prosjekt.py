@@ -33,7 +33,7 @@ def h(l : list[int]) -> int:
 
 
 def hb(l : list[int]) -> tuple[int,int,int]:
-    l = [x if x < 0 else 0 if x < 5 else x for x in l]
+    l = [x if x < 0 else 0 if x < 5 else x-5 for x in l]
     minVal = 0
     minValidx = 0
     maxdiff = 0
