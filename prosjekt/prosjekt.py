@@ -13,6 +13,8 @@ def f(l : list[int]) -> int:
     zc = 0
     mc = 0
     for i in l:
+        if i is None:
+            i = 0 if zc > 0 else 1 # antar at det er like mye nedbør som dagen før
         if i:
             zc = 0
         else:
@@ -81,4 +83,5 @@ def main():
     l()
     m()
 
-main()
+if __name__=="__main__":
+    main()
