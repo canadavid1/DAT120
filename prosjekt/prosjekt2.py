@@ -75,12 +75,11 @@ def plot_sno(data: list[Maaling]) -> None:
     start_aar = int(min(x.dato for x in data)[:4])
     slutt_aar = int(max(x.dato for x in data)[:4])
     data2 = zip(trend_skifore(data,start_aar,slutt_aar),range(start_aar,slutt_aar))
-    data2 = tuple(filter(lambda x: hvor_mange(fra_til(dato,f"{x[1]}-10-01",f"{x[1]+1}-06-01"),"sno")>=200,data2))
+    data2 = tuple(filter(lambda x: hvor_mange(fra_til(data,f"{x[1]}-10-01",f"{x[1]+1}-06-01"),"sno")>=200,data2))
     plt.plot(tuple(y for x,y in data2),tuple(x for x,y in data2),"ro")
     plt.plot((data2[0][-1],data2[-1][-1]),(data2[0][0],data2[-1][0]))
     plt.show()
     
-data = les_inn("snoedybder_vaer_en_stasjon_dogn.csv")
 #plot_sno(data)
 
 # e
@@ -138,5 +137,15 @@ def trend_temp(data: list[Maaling]):
     plt.figure(2)
     plt.plot(nm[:-1],diff)
     plt.show()
-trend_temp(data)
+
+def main():
+    data = les_inn("snoedybder_vaer_en_stasjon_dogn.csv")
+    plot_sno(data)
+    torke(data)
+    vind(data)
+    trend_temp(data)
+
+
+if __name__=="__main__":
+    main()
             
